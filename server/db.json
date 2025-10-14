@@ -1,0 +1,125 @@
+{
+  "accountUser": [
+    {
+      "firstName": "hoang nguyen",
+      "name": "duc",
+      "email": "duc@gmail.com",
+      "password": "12345678",
+      "id": 1
+    },
+    {
+      "firstName": "hoang nguyen",
+      "name": "duc",
+      "email": "ducgay2333@gmail.com",
+      "password": "1",
+      "id": 2
+    },
+    {
+      "firstName": "hoang nguyen",
+      "name": "duc",
+      "email": "ducgay233@gmail.com",
+      "password": "12345678",
+      "id": 3
+    }
+  ],
+  "subject": [
+    {
+      "subject_name": "Toán học",
+      "subject_status": "Ngừng hoạt động",
+      "subject_time": "2025-10-12T19:33:02.651Z",
+      "id": 1
+    },
+    {
+      "subject_name": "Tiếng bồ",
+      "subject_status": "Ngừng hoạt động",
+      "subject_time": "2025-10-12T19:14:59.461Z",
+      "id": 14
+    },
+    {
+      "subject_name": "Tiếng Trung1",
+      "subject_status": "Đang hoạt động",
+      "subject_time": "2025-10-12T19:30:38.881Z",
+      "id": 15
+    },
+    {
+      "subject_name": "tiếng pháp",
+      "subject_status": "Đang hoạt động",
+      "subject_time": "2025-10-12T19:33:42.429Z",
+      "id": 16
+    },
+    {
+      "subject_name": "tiếng ấn độ",
+      "subject_status": "Đang hoạt động",
+      "subject_time": "2025-10-12T19:32:34.916Z",
+      "id": 17
+    },
+    {
+      "subject_name": "Tiếng Việt1",
+      "subject_status": "Đang hoạt động",
+      "subject_time": "2025-10-13T01:12:13.569Z",
+      "id": 18
+    }
+  ],
+  "lession": [
+    {
+      "id": 1,
+      "lession_name": "Session 01 - Tổng quan về HTML",
+      "time": 60,
+      "lession_status": "incomplete"
+    },
+    {
+      "id": 2,
+      "lession_name": "Session 02 - Thẻ Inline và Block",
+      "time": 60,
+      "lession_status": "complete"
+    },
+    {
+      "id": 3,
+      "lession_name": "Session 03 - Cấu trúc trang HTML",
+      "time": 45,
+      "lession_status": "incomplete"
+    },
+    {
+      "id": 4,
+      "lession_name": "Session 04 - Thuộc tính và đường dẫn ",
+      "time": 50,
+      "lession_status": "complete"
+    },
+    {
+      "id": 5,
+      "lession_name": "Session 05 - Hình ảnh và đa phương tiện",
+      "time": 55,
+      "lession_status": "incomplete"
+    },
+    {
+      "id": 6,
+      "lession_name": "Session 06 - Bảng (Table) trong HTML",
+      "time": 70,
+      "lession_status": "complete"
+    },
+    {
+      "id": 7,
+      "lession_name": "Session 07 - Form và Input cơ bản",
+      "time": 65,
+      "lession_status": "incomplete"
+    },
+    {
+      "id": 8,
+      "lession_name": "Session 08 - Semantic HTML",
+      "time": 50,
+      "lession_status": "complete"
+    },
+    {
+      "id": 9,
+      "lession_name": "Session 09 - HTML5 APIs cơ bản",
+      "time": 75,
+      "lession_status": "incomplete"
+    },
+    {
+      "id": 10,
+      "lession_name": "Session 10 - Ôn tập và bài tập thực hành",
+      "time": 90,
+      "lession_status": "complete"
+    }
+  ]
+}
