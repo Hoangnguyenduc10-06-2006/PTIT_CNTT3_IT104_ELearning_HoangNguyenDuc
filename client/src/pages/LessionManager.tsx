@@ -42,6 +42,7 @@ import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { IoSearchCircleOutline } from "react-icons/io5";
 import { styled } from "@mui/material/styles";
+import { useNavigate } from "react-router-dom";
 export default function LessionManager() {
   // xử lý sự kiện của lọc theo trạng thái
   const [age, setAge] = React.useState("");
@@ -56,10 +57,8 @@ export default function LessionManager() {
   const [filterStatus, setFilterStatus] = useState("");
   const [sort, setSort] = useState("lession_name");
   const [order, setOrder] = useState<boolean>(true);
-
-  const handleClodeAddLession = () => {
-    setOpen(false);
-  };
+  const [openAdd, setOpenAdd] = useState(false);
+  // const [open, setOpen] = useState<boolean>(false);
 
   // khu vuc xu ly cua table
 
@@ -143,7 +142,20 @@ export default function LessionManager() {
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
   useEffect(() => {
     listLession();
-  }, [page, searchElement, sort, order, filterStatus]);
+  }, [page, searchElement, sort, order, filterStatus, open]);
+
+  const navigate = useNavigate();
+  const handleLsubject = () => {
+    navigate("/subject_Manager");
+  };
+  // modal them
+
+  const handleOpenAdd = () => {
+    setOpenAdd(true);
+  };
+  const handleClodeAdd = () => {
+    setOpenAdd(false);
+  };
   return (
     <div className="flex">
       {/* sidebar trai */}
@@ -188,7 +200,7 @@ export default function LessionManager() {
                 </ListItemButton>
               </ListItem>
               <ListItem disablePadding>
-                <ListItemButton>
+                <ListItemButton onClick={handleLsubject}>
                   <ListItemIcon>
                     <LibraryBooksIcon></LibraryBooksIcon>
                   </ListItemIcon>
@@ -268,7 +280,9 @@ export default function LessionManager() {
                 </Select>
               </FormControl>
 
-              <Button variant="contained">Thêm mới môn học</Button>
+              <Button variant="contained" onClick={handleOpenAdd}>
+                Thêm mới môn học
+              </Button>
             </div>
           </div>
           <div className="flex justify-end mt-2">
@@ -400,11 +414,8 @@ export default function LessionManager() {
           page={page}
           onChange={(e, value) => setPage(value)}
         />
-        <ModalAddLession
-          open={false}
-          close={handleClodeAddLession}
-        ></ModalAddLession>
       </div>
+      <ModalAddLession open={openAdd} close={handleClodeAdd}></ModalAddLession>
     </div>
   );
 }

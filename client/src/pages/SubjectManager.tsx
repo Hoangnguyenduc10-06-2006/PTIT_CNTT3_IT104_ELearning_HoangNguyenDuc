@@ -43,6 +43,8 @@ import axios from "axios";
 import ModalDelete from "../components/ModalDelete";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ModalUpdateSubject from "../components/ModalUpdateSubject";
+import { NavLink, useNavigate } from "react-router-dom";
+import { log } from "console";
 export default function SubjectManager() {
   // xử lý sự kiện của lọc theo trạng thái
   const [age, setAge] = React.useState("");
@@ -213,7 +215,10 @@ export default function SubjectManager() {
     // ListSubject();
     getSubjects(page);
   }, [open, page, searchTerm, fiterStatus, order]);
-
+  const navigate = useNavigate();
+  const handleLession = () => {
+    navigate("/lession_manager");
+  };
   return (
     <div className="flex">
       {/* sidebar trai */}
@@ -277,7 +282,7 @@ export default function SubjectManager() {
                 </ListItemButton>
               </ListItem>
               <ListItem disablePadding>
-                <ListItemButton>
+                <ListItemButton onClick={handleLession}>
                   <ListItemIcon>
                     <FolderCopyIcon></FolderCopyIcon>
                   </ListItemIcon>

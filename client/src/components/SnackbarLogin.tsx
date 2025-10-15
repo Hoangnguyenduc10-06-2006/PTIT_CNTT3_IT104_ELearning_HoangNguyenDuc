@@ -1,8 +1,4 @@
-import {
-  Alert,
-  Snackbar,
-  type SnackbarCloseReason,
-} from "@mui/material";
+import { Alert, Snackbar, type SnackbarCloseReason } from "@mui/material";
 import React, { useEffect } from "react";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
